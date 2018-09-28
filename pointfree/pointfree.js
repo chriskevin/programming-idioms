@@ -1,7 +1,3 @@
-////
-// Pointful/Pointfree
-////
-
 // In a pointful scenario it is necessary to explicitly specify the parameter
 [{id: 12}, {id: 24}, {id: 5}].filter((x) => propEq(24, x));
 

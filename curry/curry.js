@@ -1,25 +1,11 @@
-////
-// Curry
-////
-
-// Non curried
-
 const add = (x, y) => x + y;
 
-// and is called like so
+const curriedAdd = (x) => (y) => x + y;
 
 add(1, 3);
+curriedAdd(1)(3);
 
-// Basic currying
-
-const add = (x) => (y) => x + y;
-
-// and is called like so
-
-add(1)(3);
-
-
-// Preferably use a curry helper which is optimized
+/* Preferably use a curry helper which is optimized */
 
 import {curry} from 'ramda';
 
