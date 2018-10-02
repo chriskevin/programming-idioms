@@ -4,12 +4,12 @@ fun add(x:Int, y:Int):Int {
 
 fun curriedAdd(x:Int) = {y:Int -> x + y}
 
-/*
-  This is the same thing but in a longer form.
-  
-  fun curriedAdd(x:Int) : (Int) -> Int {
-    return {y:Int -> x + y}
-  }
+/**
+ * This is the same thing but in a longer form.
+ *
+ * fun curriedAdd(x:Int) : (Int) -> Int {
+ *     return {y:Int -> x + y}
+ * }
  */
 
 
