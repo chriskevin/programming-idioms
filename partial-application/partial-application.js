@@ -1,17 +1,14 @@
-////
-// Partial Application
-////
+/**
+ * This is the usual way you would reuse code to create more specific functionality from general functionality.
+ *
+ * const add = (x, y) => x + y;
+ *
+ * const inc = x => add(x, 1);
+ */
 
-// Partial application can be used for creating more specific functions
+const add = x => y => x + y;
 
-// Without partial application you would need use a wrapping function, creating additiional boilerplate
-
-const inc = (x) => add(x, 1);
-
-// With partial application you provide a subset of arguments and let the new function provide the last ones when called
-
+/* Currying let's us leverage partial application which eliminates all the extra noise. */
 const inc = add(1);
 
-// Both variants are called like so
-
-inc(3);
+console.log("Applied second argument:", inc(2)); // "Applied second argument: 3"
