@@ -4,11 +4,11 @@ public class FunctionCompose {
      * Imperative approach
      * This adds a lot of explicit state that we are not interested in.
      */
-    public static Char nextCharForNumberString(String str) {
+    public static String nextCharForNumberString(String str) {
         String trimmed = str.trim();
         Integer number = parseInt(trimmed);
         Integer nextNumber = number + 1;
-        return String.fromCharCode(nextNumber);
+        return fromCharCode(nextNumber);
     }
 
     /**
@@ -16,8 +16,8 @@ public class FunctionCompose {
      * This removes the explicit state but can be hard to read
      * since it is not entirely clear were the most nested part is.
      */
-    public static Char nextCharForNumberString(String str) {
-        return String.fromCharCode(parseInt(str.trim()) + 1);
+    public static String nextCharForNumberString(String str) {
+        return fromCharCode(parseInt(str.trim()) + 1);
     }
 
     /**
@@ -58,13 +58,13 @@ public class FunctionCompose {
     /**
      * You can also compose by calling map on a functor.
      */
-    public static Char nextCharForNumberString(String str) {
+    public static String nextCharForNumberString(String str) {
         return Stream.of(str)
             .map(trim)
             .map(parseInt)
             .map(inc)
             .map(fromCharCode)
-            .reduce(Char.class, (acc, x) -> x);
+            .reduce(String.class, (acc, x) -> x);
     }
 
     public static void main(String[] args) {
