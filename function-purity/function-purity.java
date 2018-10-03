@@ -22,9 +22,6 @@ public class FunctionPurity {
         return list;
     }
 
-    /**
-     * 
-     */
     public static List<String> pureAddWhen(Predicate pred, String value, List<String> list) {
         return list.stream().anyMatch(pred) ?
             Stream.concat(list.stream(), Stream.of(value))
