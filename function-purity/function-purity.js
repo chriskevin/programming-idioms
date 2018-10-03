@@ -1,5 +1,3 @@
-/* Here we conditionally extend a list. */
-
 /**
  * The impure version has several problems.
  * 1) It is a lot more verbose than the pure and immutable version
