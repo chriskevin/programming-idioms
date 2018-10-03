@@ -1,8 +1,8 @@
-fun add(x:Int, y:Int):Int {
-    return x + y;
+fun add(x: Int, y: Int): Int {
+    return x + y
 }
 
-fun curriedAdd(x:Int) = {y:Int -> x + y}
+fun curriedAdd(x: Int) = {y: Int -> x + y}
 
 /**
  * This is the same thing but in a longer form.
