@@ -19,7 +19,7 @@ const nextCharForNumberString = str => String.fromCharCode(parseInt(str.trim()) 
 /**
  * A simple compose function looks like this:
  * 
- * const compose = (f, g) => x => g(f(x));
+ * const compose = (f, g) => x => f(g(x));
  * 
  * Execution order is right to left. Why? Because math says so.
  * If you want left to right execution use a pipe function instead.
