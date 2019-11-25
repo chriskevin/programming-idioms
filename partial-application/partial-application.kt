@@ -12,9 +12,9 @@
 
 fun add(x: Int) = {y: Int -> x + y}
 
-/* Currying let's us leverage partial application which eliminates all the extra noise. */
+// Currying let's us leverage partial application which eliminates all the extra noise.
 val inc = add(1)
 
-fun main(args: Array<String>) {
-    println("Applied second argument:" + inc(2)); // "Applied second argument: 3"
-}
+// fun main(args: Array<String>) {
+//     println("Applied second argument:" + inc(2)); // "Applied second argument: 3"
+// }
