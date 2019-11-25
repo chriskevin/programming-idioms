@@ -1,6 +1,6 @@
 import java.util.function.Function;
 
-public class Lambda {
+public class Main {
 
     /* Regular function (Kind of, close enough since Java insists on creating classes) */
     public static Integer regularFn(final Integer x) {
