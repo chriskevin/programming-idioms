@@ -1,8 +1,8 @@
 import java.util.function.Function;
 
-public class Curry {
+public class Main {
 
-    public static Integer add(Integer x, Integer y) {
+    public static Integer add(final Integer x, final Integer y) {
         return x + y;
     }
 
@@ -17,7 +17,7 @@ public class Curry {
      *   (x, y) -> x + y;
      */
 
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         System.out.println("Non curried: " + add(1, 2)); // "Non curried: 3"
         System.out.println("Curried: " + curriedAdd.apply(1).apply(2)); // "Curried: 3"
 
