@@ -6,7 +6,7 @@ fun regularFn(x: Int): Int {
 /* Lambda */
 val lambdaFn = {x: Int -> x + x}
 
-fun main(args: Array<String>) {
-    println(regularFn(2)) // 4
-    println(lambdaFn(4)) // 8
-}
+// fun main(args: Array<String>) {
+//     println(regularFn(2)) // 4
+//     println(lambdaFn(4)) // 8
+// }
