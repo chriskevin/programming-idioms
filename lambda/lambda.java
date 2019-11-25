@@ -2,12 +2,12 @@ import java.util.function.Function;
 
 public class Main {
 
-    /* Regular function (Kind of, close enough since Java insists on creating classes) */
+    // Regular function (Kind of, close enough since Java insists on creating classes)
     public static Integer regularFn(final Integer x) {
         return x + x;
     }
 
-    /* Lambda */
+    // Lambda
     public static final Function<Integer, Integer> lambdaFn = x -> x + x;
 
     public static void main(final String[] args) {

@@ -1,9 +1,9 @@
-/* Regular function */
+// Regular function
 fun regularFn(x: Int): Int {
     return x + x
 }
 
-/* Lambda */
+// Lambda
 val lambdaFn = {x: Int -> x + x}
 
 // fun main(args: Array<String>) {

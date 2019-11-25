@@ -1,9 +1,9 @@
-/* Regular function */
+// Regular function
 export function regularFn(x) {
     return x + x
 }
 
-/* Lambda */
+// Lambda
 export const lambdaFn = x => x + x
 
 // console.log(regularFn(2)) // 4

@@ -1,5 +1,6 @@
--- A lambda is expressed as (\n -> n) in Haskell.
-let lambdaFn = (\n -> n + n)
+-- Regular function
+regularFn :: (Num a) => a -> a
+regularFn x = (x + x)
 
--- main :: IO ()
--- main = putStrLn . show $ filter (\n -> n `mod` 2 == 0) [1..5]
+-- Lambda
+let lambdaFn = (\n -> n + n)
