@@ -1,3 +1,15 @@
+// Util to compose two functions.
+const compose = (g, f) => x => g(f(x))
+
+// Util to pipe two functions.
+const pipe = (f, g) => x => f(g(x))
+
+// Util to compose more than two functions.
+const composeN = (...fns) => x => fns.reverse().reduce((acc, fn) => fn(acc), x)
+
+// Util to pipe more than two functions.
+const pipeN = (...fns) => x => fns.reduce((acc, fn) => fn(acc), x)
+
 /**
  * Imperative approach
  * This adds a lot of explicit state that we are not interested in.
@@ -17,35 +29,13 @@ const nextCharForNumberString = str => {
 const nextCharForNumberString = str => String.fromCharCode(parseInt(str.trim()) + 1);
 
 /**
- * A simple compose function looks like this:
- * 
- * const compose = (f, g) => x => g(f(x));
- * 
- * Execution order is right to left. Why? Because math says so.
- * If you want left to right execution use a pipe function instead.
- * 
- * However Ramda has a compose function that can take n functions
- * as well as a pipe function that can take a list of functions.
- * 
- * So for this purpose we will assume that we use Ramdas compose.
- */
-
-/**
  * Composition approach
  * This approach has no explicit state, is very readable
  * and also pointfree as an additional bonus.
  */
-const nextCharForNumberString = compose(String.fromCharCode, inc, parseInt, trim);
+const nextCharForNumberString = composeN(String.fromCharCode, inc, parseInt, trim);
 
-/**
- * Alternative approach using Ramdas pipe function:
- * 
- * const nextCharForNumberString = pipe([trim, parseInt, inc, String.fromCharCode]);
- */
-
-/**
- * You can also compose by calling map on a functor.
- */
+// You can also compose by calling map on a functor.
 const nextCharForNumberString = (str) =>
 [str] // Of
     .map(trim)
@@ -53,3 +43,4 @@ const nextCharForNumberString = (str) =>
     .map(inc)
     .map(String.fromCharCode)
     .reduce((acc, x) => x); // Fold
+    

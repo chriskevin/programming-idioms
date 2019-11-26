@@ -1,4 +1,4 @@
-public class FunctionCompose {
+public class Main {
 
     /**
      * Imperative approach
@@ -21,21 +21,8 @@ public class FunctionCompose {
     }
 
     /**
-     * A simple compose function looks like this:
-     * 
-     * const compose = (f, g) => x => g(f(x));
-     * 
-     * Execution order is right to left. Why? Because math says so.
-     * If you want left to right execution use a pipe function instead.
-     * 
-     * However Ramda has a compose function that can take n functions
-     * as well as a pipe function that can take a list of functions.
-     * 
-     * So for this purpose we will assume that we use Ramdas compose.
-     */
-
-    /**
      * Composition approach
+     * 
      * This approach has no explicit state, is very readable
      * and also pointfree as an additional bonus.
      * However Java requires you to call compose several times,
