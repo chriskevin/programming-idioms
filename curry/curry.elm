@@ -1,0 +1,2 @@
+-- In Elm all functions are curried by default.
+-- (+)(1)(2)
